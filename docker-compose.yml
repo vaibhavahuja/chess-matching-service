@@ -1,0 +1,18 @@
+services:
+  mysql:
+    platform: linux/amd64
+    image: mysql:5.7
+    container_name: mysqlc
+    command: --default-authentication-plugin=mysql_native_password --init-file /data/application/seeddb.sql
+    volumes:
+      - ./testData/sql/seeddb.sql:/data/application/seeddb.sql
+    environment:
+      MYSQL_DATABASE: match_maker
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3307:3306"
+  redis:
+    image: redis
+    container_name: redisc
+    ports:
+      - "6379:6379"
