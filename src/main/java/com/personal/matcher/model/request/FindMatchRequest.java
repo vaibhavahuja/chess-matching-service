@@ -1,10 +1,9 @@
 package com.personal.matcher.model.request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.personal.matcher.model.entity.GamePreferences;
+import com.personal.matcher.model.bo.GamePreferences;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NonNull;
 
 @Data
 @Builder
@@ -13,7 +12,7 @@ public class FindMatchRequest {
     private String requestId;
 
     @JsonProperty("user_id")
-    private String userId;
+    private int userId;
 
     @JsonProperty("preferences")
     private GamePreferences preferences;

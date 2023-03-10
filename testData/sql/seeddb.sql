@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS `match_maker_requests` (
     `user_id` varchar(255) NOT NULL,
     `game_preferences_id` varchar(255) NOT NULL,
     `requested_at` datetime NOT NULL,
-    `status` varchar(255) NOT NULL,
+    `status` bool NOT NULL,
     PRIMARY KEY (`id`)
 );
 
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `game_type` (
     `game_format` varchar(255) NOT NULL,
     `fixed_duration` int NOT NULL,
     `incremental_duration` int NOT NULL,
-    `status` int NOT NULL,
+    `status` bool NOT NULL,
     `created_at` datetime NOT NULL,
     `updated_at` datetime NOT NULL,
     `created_by` varchar(255) NOT NULL,
