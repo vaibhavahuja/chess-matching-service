@@ -1,4 +1,4 @@
-package com.personal.matcher.model.entity;
+package com.personal.matcher.model.bo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
